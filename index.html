@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>सरस्वती पूजा सहयोग पोर्टल | Saraswati Puja 2026</title>
+    <title>सरस्वती पूजा सहयोग 2026 | Saraswati Puja Donation Portal</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="सरस्वती पूजा 2026 में ऑनलाइन सहयोग करें। सिंगेस्वरी, बौंसी, बांका में आयोजित बसंत पंचमी महोत्सव।">
+    <meta name="keywords" content="Saraswati Puja, Donation, Basant Panchami, Bounsi, Bihar">
+    <meta property="og:title" content="सरस्वती पूजा सहयोग 2026">
+    <meta property="og:description" content="माँ सरस्वती की कृपा के लिए ऑनलाइन सहयोग करें">
+    <meta property="og:type" content="website">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     
     <!-- CSS File -->
     <link rel="stylesheet" href="style.css">
@@ -16,20 +31,61 @@
 </head>
 <body>
 
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Floating Action Button -->
+    <div class="fab-container">
+        <button class="fab" id="fabBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="fab-menu" id="fabMenu">
+            <a href="#home" class="fab-item" data-tooltip="होम">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="#donate" class="fab-item" data-tooltip="दान करें">
+                <i class="fas fa-hand-holding-heart"></i>
+            </a>
+            <a href="#donors" class="fab-item" data-tooltip="सहयोगी">
+                <i class="fas fa-users"></i>
+            </a>
+            <a href="#bhajan" class="fab-item" data-tooltip="भजन">
+                <i class="fas fa-music"></i>
+            </a>
+        </div>
+    </div>
+
     <!-- Header (Sticky Navigation) -->
-    <header id="header">
+    <header id="header" class="glass-header">
         <nav class="navbar">
-            <div class="logo">
-                <span class="om-symbol">ॐ</span>
-                <span class="site-title">सरस्वती पूजा</span>
+            <div class="logo" data-aos="fade-right">
+                <div class="om-container">
+                    <span class="om-symbol rotating">ॐ</span>
+                </div>
+                <div class="logo-text">
+                    <span class="site-title">सरस्वती पूजा</span>
+                    <span class="site-subtitle">बसंत पंचमी 2026</span>
+                </div>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link active">मुख्य पृष्ठ</a></li>
-                <li><a href="#donate" class="nav-link">सहयोग करें</a></li>
-                <li><a href="#donors" class="nav-link">सहयोगी सूची</a></li>
-                <li><a href="#bhajan" class="nav-link">भजन संगम</a></li>
-                <li><a href="#support" class="nav-link">सहायता</a></li>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">
+                    <i class="fas fa-home"></i> <span>मुख्य पृष्ठ</span>
+                </a></li>
+                <li><a href="#donate" class="nav-link">
+                    <i class="fas fa-donate"></i> <span>सहयोग करें</span>
+                </a></li>
+                <li><a href="#donors" class="nav-link">
+                    <i class="fas fa-users"></i> <span>सहयोगी सूची</span>
+                </a></li>
+                <li><a href="#bhajan" class="nav-link">
+                    <i class="fas fa-music"></i> <span>भजन संगम</span>
+                </a></li>
+                <li><a href="#support" class="nav-link">
+                    <i class="fas fa-phone"></i> <span>सहायता</span>
+                </a></li>
             </ul>
+            
             <button class="mobile-menu-toggle" id="mobileMenuBtn">
                 <span></span>
                 <span></span>
@@ -43,332 +99,690 @@
 
         <!-- HOME SECTION -->
         <section id="home" class="section active">
-            <div class="hero-container">
-                <div class="hero-image">
-                    <img src="img.jpg?w=800" alt="Maa Saraswati" id="saraswatiImage">
-                    <div class="vandana-overlay">
-                        <p class="vandana-text">
-                            "या कुन्देन्दुतुषारहारधवला<br>
-                            या शुभ्रवस्त्रावृता<br>
-                            या वीणावरदण्डमण्डितकरा<br>
-                            या श्वेतपद्मासना।<br>
-                            या ब्रह्माच्युत शंकरप्रभृतिभिर्देवैः सदा वन्दिता<br>
-                            सा मां पातु सरस्वती भगवती<br>
-                            निःशेषजाड्यापहा॥"
-                        </p>
+            
+            <!-- Hero Section -->
+            <div class="hero-section" data-aos="fade-up">
+                <div class="hero-content">
+                    <div class="hero-image-container">
+                        <div class="image-frame">
+                            <img src="img.jpg" alt="Maa Saraswati" class="hero-img">
+                            <div class="image-glow"></div>
+                        </div>
+                        <div class="vandana-overlay glass-effect">
+                            <div class="om-header">ॐ</div>
+                            <p class="vandana-text">
+                                "या कुन्देन्दुतुषारहारधवला<br>
+                                या शुभ्रवस्त्रावृता<br>
+                                या वीणावरदण्डमण्डितकरा<br>
+                                या श्वेतपद्मासना।<br>
+                                या ब्रह्माच्युत शंकरप्रभृतिभिर्देवैः सदा वन्दिता<br>
+                                सा मां पातु सरस्वती भगवती<br>
+                                निःशेषजाड्यापहा॥"
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <li><a href="#donate" class="nav-link">सहयोग करें</a></li>
-                <div class="puja-info-card">
-                    <h1>🌼 सरस्वती पूजा 2026 🌼</h1>
-                    <div class="puja-date">
-                        <span class="date-icon">📅</span>
-                        <span class="date-text">23 जनवरी 2026 (बसंत पंचमी)</span>
+            </div>
+
+            <!-- Puja Info Card -->
+            <div class="puja-info-card glass-effect" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card-header">
+                    <h1>
+                        <span class="flower">🌼</span>
+                        सरस्वती पूजा महोत्सव 2026
+                        <span class="flower">🌼</span>
+                    </h1>
+                </div>
+                
+                <!-- Countdown Timer -->
+                <div class="countdown-container">
+                    <h3>पूजा में शेष समय</h3>
+                    <div class="countdown" id="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="days">00</span>
+                            <span class="countdown-label">दिन</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="hours">00</span>
+                            <span class="countdown-label">घंटे</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="minutes">00</span>
+                            <span class="countdown-label">मिनट</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="seconds">00</span>
+                            <span class="countdown-label">सेकंड</span>
+                        </div>
                     </div>
-                    <p class="puja-location">📍 सिंगेस्वरी, बौंसी, बांका, बिहार - 813104</p>
                 </div>
 
-                <div class="stats-container">
-                    <div class="stat-card">
-                        <div class="stat-icon">💰</div>
+                <div class="puja-date">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span class="date-text">23 जनवरी 2026 (बसंत पंचमी)</span>
+                </div>
+                <p class="puja-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    सिंगेस्वरी हाई स्कूल, बौंसी, बांका, बिहार - 813104
+                </p>
+            </div>
+
+            <!-- Donation Progress -->
+            <div class="donation-progress" data-aos="fade-up" data-aos-delay="300">
+                <h3>सहयोग की प्रगति</h3>
+                <div class="progress-info">
+                    <span>लक्ष्य: ₹1,00,000</span>
+                    <span id="progressPercent">0%</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progressBar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Counter -->
+            <div class="stats-container" data-aos="fade-up" data-aos-delay="400">
+                <div class="stat-card glass-effect">
+                    <div class="stat-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="stat-content">
                         <div class="stat-value" id="totalDonation">₹ 0</div>
                         <div class="stat-label">कुल सहयोग राशि</div>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">👥</div>
+                    <div class="stat-sparkle">✨</div>
+                </div>
+                
+                <div class="stat-card glass-effect">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
                         <div class="stat-value" id="totalDonors">0</div>
                         <div class="stat-label">कुल सहयोगी</div>
                     </div>
+                    <div class="stat-sparkle">✨</div>
                 </div>
-
-                <div class="cta-section">
-                    <li><a href="#donate" class="nav-link">सहयोग करें</a></li>
+                
+                <div class="stat-card glass-effect">
+                    <div class="stat-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="todayDonors">0</div>
+                        <div class="stat-label">आज के सहयोगी</div>
+                    </div>
+                    <div class="stat-sparkle">✨</div>
                 </div>
             </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section" data-aos="zoom-in" data-aos-delay="500">
+                <a href="#donate" class="btn-primary btn-glow">
+                    <span class="btn-icon">🙏</span>
+                    <span class="btn-text">अभी सहयोग करें</span>
+                    <span class="btn-shine"></span>
+                </a>
+                <p class="cta-subtitle">आपका छोटा सा योगदान भी बड़ा परिवर्तन लाएगा</p>
+            </div>
+
         </section>
 
         <!-- DONATE SECTION -->
         <section id="donate" class="section">
-            <div class="section-header">
-                <h2>💛 सहयोग करें</h2>
-                <p>आपका छोटा सा योगदान भी माँ सरस्वती की कृपा का माध्यम बनेगा</p>
+            <div class="section-header" data-aos="fade-down">
+                <div class="section-icon">💛</div>
+                <h2>सहयोग करें</h2>
+                <p>आपका सहयोग माँ सरस्वती की कृपा का माध्यम बनेगा</p>
+                <div class="header-divider"></div>
             </div>
 
             <div class="donate-container">
+                
                 <!-- Left: Payment Details -->
-                <div class="payment-details">
-                    <div class="payment-card">
-                        <h3>💳 भुगतान विवरण</h3>
+                <div class="payment-details" data-aos="fade-right">
+                    <div class="payment-card glass-effect">
+                        <div class="card-header-accent">
+                            <i class="fas fa-credit-card"></i>
+                            <h3>भुगतान विवरण</h3>
+                        </div>
                         
+                        <div class="payment-steps-guide">
+                            <div class="step">
+                                <span class="step-number">1</span>
+                                <span class="step-text">QR स्कैन करें</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">2</span>
+                                <span class="step-text">राशि दर्ज करें</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">3</span>
+                                <span class="step-text">स्क्रीनशॉट लें</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">4</span>
+                                <span class="step-text">फॉर्म भरें</span>
+                            </div>
+                        </div>
+
                         <div class="qr-code-container">
-                            <img id="qrCode" src="" alt="UPI QR Code">
-                            <p class="qr-label">स्कैन करें और भुगतान करें</p>
+                            <div class="qr-wrapper">
+                                <img id="qrCode" src="" alt="UPI QR Code" class="qr-image">
+                                <div class="qr-scan-line"></div>
+                            </div>
+                            <p class="qr-label">
+                                <i class="fas fa-qrcode"></i> स्कैन करें और भुगतान करें
+                            </p>
                         </div>
 
                         <div class="upi-details">
                             <div class="detail-row">
-                                <span class="label">UPI ID:</span>
-                                <span class="value" id="upiId">rkrupeshchoudhary@oksbi</span>
-                                <button class="copy-btn" onclick="copyUPI()">📋</button>
+                                <span class="label">
+                                    <i class="fas fa-wallet"></i> UPI ID:
+                                </span>
+                                <div class="upi-value-container">
+                                    <span class="value" id="upiId">rkrupeshchoudhary@oksbi</span>
+                                    <button class="copy-btn" onclick="copyUPI()" data-tooltip="कॉपी करें">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
                         <div class="bank-details">
-                            <h4>🏦 बैंक विवरण</h4>
-                            <p><strong>बैंक:</strong> State Bank of India</p>
-                            <p><strong>खाता:</strong> कृपया UPI का उपयोग करें</p>
+                            <h4><i class="fas fa-university"></i> बैंक विवरण</h4>
+                            <div class="bank-info">
+                                <p><strong>बैंक:</strong> State Bank of India (SBI)</p>
+                                <p><strong>खाताधारक:</strong> सरस्वती पूजा समिति</p>
+                                <p class="note">कृपया UPI का उपयोग करें (तेज़ और सुरक्षित)</p>
+                            </div>
                         </div>
 
-                        <div class="payment-steps">
-                            <h4>📱 भुगतान कैसे करें?</h4>
-                            <ol>
-                                <li>QR कोड स्कैन करें या UPI ID कॉपी करें</li>
-                                <li>राशि दर्ज करें और भुगतान करें</li>
-                                <li>स्क्रीनशॉट लें</li>
-                                <li>दाईं ओर फॉर्म भरें</li>
-                            </ol>
+                        <div class="secure-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>100% सुरक्षित भुगतान</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Right: Donation Form -->
-                <div class="donation-form-container">
-                    <form id="donationForm" class="donation-form">
-                        <h3>✍️ सहयोग विवरण भरें</h3>
-
-                        <div class="form-group">
-                            <label for="donorName">नाम *</label>
-                            <input type="text" id="donorName" name="donorName" required placeholder="अपना पूरा नाम दर्ज करें">
+                <div class="donation-form-container" data-aos="fade-left">
+                    <div class="form-card glass-effect">
+                        <div class="card-header-accent">
+                            <i class="fas fa-edit"></i>
+                            <h3>सहयोग विवरण भरें</h3>
                         </div>
 
-                        <div class="form-group">
-                            <label for="donorMobile">मोबाइल नंबर *</label>
-                            <input type="tel" id="donorMobile" name="donorMobile" required 
-                                   pattern="[6-9][0-9]{9}" 
-                                   placeholder="10 अंकों का मोबाइल नंबर">
-                        </div>
+                        <form id="donationForm" class="donation-form">
+                            
+                            <div class="form-group">
+                                <label for="donorName">
+                                    <i class="fas fa-user"></i> पूरा नाम *
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="donorName" name="donorName" required 
+                                           placeholder="अपना पूरा नाम दर्ज करें">
+                                    <span class="input-border"></span>
+                                </div>
+                            </div>
 
-                        <div class="form-group">
-                            <label for="donationAmount">राशि (₹) *</label>
-                            <input type="number" id="donationAmount" name="donationAmount" required 
-                                   min="1" placeholder="सहयोग राशि दर्ज करें">
-                        </div>
+                            <div class="form-group">
+                                <label for="donorMobile">
+                                    <i class="fas fa-phone"></i> मोबाइल नंबर *
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="tel" id="donorMobile" name="donorMobile" required 
+                                           pattern="[6-9][0-9]{9}" 
+                                           placeholder="10 अंकों का मोबाइल नंबर">
+                                    <span class="input-border"></span>
+                                </div>
+                            </div>
 
-                        <div class="form-group">
-                            <label for="paymentScreenshot">भुगतान स्क्रीनशॉट *</label>
-                            <input type="file" id="paymentScreenshot" name="paymentScreenshot" 
-                                   accept="image/png, image/jpeg, image/jpg" required>
-                            <small>PNG या JPG (अधिकतम 5MB)</small>
-                        </div>
+                            <div class="form-group">
+                                <label for="donationAmount">
+                                    <i class="fas fa-rupee-sign"></i> सहयोग राशि (₹) *
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="number" id="donationAmount" name="donationAmount" required 
+                                           min="1" placeholder="राशि दर्ज करें">
+                                    <span class="input-border"></span>
+                                </div>
+                                <div class="quick-amounts">
+                                    <button type="button" class="amount-btn" onclick="setAmount(51)">₹51</button>
+                                    <button type="button" class="amount-btn" onclick="setAmount(101)">₹101</button>
+                                    <button type="button" class="amount-btn" onclick="setAmount(251)">₹251</button>
+                                    <button type="button" class="amount-btn" onclick="setAmount(501)">₹501</button>
+                                    <button type="button" class="amount-btn" onclick="setAmount(1001)">₹1001</button>
+                                </div>
+                            </div>
 
-                        <div class="form-actions">
-                            <button type="submit" class="btn-submit" id="submitBtn">
-                                <span class="btn-text">सबमिट करें</span>
-                                <span class="loader" style="display: none;"></span>
-                            </button>
-                        </div>
+                            <div class="form-group">
+                                <label for="paymentScreenshot">
+                                    <i class="fas fa-image"></i> भुगतान स्क्रीनशॉट *
+                                </label>
+                                <div class="file-upload-wrapper">
+                                    <input type="file" id="paymentScreenshot" name="paymentScreenshot" 
+                                           accept="image/png, image/jpeg, image/jpg" required>
+                                    <label for="paymentScreenshot" class="file-upload-label">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <span id="fileName">फाइल चुनें या यहाँ ड्रैग करें</span>
+                                        <small>PNG या JPG (अधिकतम 5MB)</small>
+                                    </label>
+                                    <div id="imagePreview" class="image-preview"></div>
+                                </div>
+                            </div>
 
-                        <div id="formMessage" class="form-message"></div>
-                    </form>
+                            <div class="form-actions">
+                                <button type="submit" class="btn-submit btn-glow" id="submitBtn">
+                                    <span class="btn-icon">🙏</span>
+                                    <span class="btn-text">सबमिट करें</span>
+                                    <span class="loader"></span>
+                                    <span class="btn-shine"></span>
+                                </button>
+                            </div>
+
+                            <div id="formMessage" class="form-message"></div>
+                        </form>
+                    </div>
                 </div>
+
             </div>
         </section>
 
         <!-- DONOR LIST SECTION -->
         <section id="donors" class="section">
-            <div class="section-header">
-                <h2>🙏 सहयोगी सूची</h2>
-                <p>सभी स्वीकृत सहयोगियों की सूची</p>
+            <div class="section-header" data-aos="fade-down">
+                <div class="section-icon">🙏</div>
+                <h2>सहयोगी सूची</h2>
+                <p>सभी स्वीकृत सहयोगियों के नाम सम्मान के साथ</p>
+                <div class="header-divider"></div>
             </div>
 
-            <div class="donors-container">
-                <div class="search-box">
-                    <input type="text" id="donorSearch" placeholder="🔍 नाम से खोजें...">
+            <div class="donors-container" data-aos="fade-up">
+                
+                <div class="search-filter-section glass-effect">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="donorSearch" placeholder="नाम या रसीद नंबर से खोजें...">
+                        <button class="clear-search" id="clearSearch">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-filter="all">
+                            <i class="fas fa-list"></i> सभी
+                        </button>
+                        <button class="filter-btn" data-filter="today">
+                            <i class="fas fa-calendar-day"></i> आज
+                        </button>
+                        <button class="filter-btn" data-filter="high">
+                            <i class="fas fa-arrow-up"></i> उच्च राशि
+                        </button>
+                    </div>
                 </div>
 
-                <div class="donors-table-container">
-                    <table class="donors-table">
-                        <thead>
-                            <tr>
-                                <th>क्र.सं.</th>
-                                <th>नाम</th>
-                                <th>राशि (₹)</th>
-                                <th>तिथि</th>
-                                <th>रसीद नं.</th>
-                            </tr>
-                        </thead>
-                        <tbody id="donorsTableBody">
-                            <tr>
-                                <td colspan="5" class="loading-row">
-                                    <div class="spinner"></div>
-                                    <p>डेटा लोड हो रहा है...</p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="donors-table-container glass-effect">
+                    <div class="table-header">
+                        <h3><i class="fas fa-users"></i> सहयोगी विवरण</h3>
+                        <div class="table-actions">
+                            <button class="export-btn" onclick="exportToExcel()">
+                                <i class="fas fa-download"></i> Export
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="table-wrapper">
+                        <table class="donors-table">
+                            <thead>
+                                <tr>
+                                    <th>क्र.सं.</th>
+                                    <th>नाम</th>
+                                    <th>राशि (₹)</th>
+                                    <th>तिथि</th>
+                                    <th>रसीद नं.</th>
+                                </tr>
+                            </thead>
+                            <tbody id="donorsTableBody">
+                                <tr>
+                                    <td colspan="5" class="loading-row">
+                                        <div class="spinner-container">
+                                            <div class="spinner"></div>
+                                            <p>डेटा लोड हो रहा है...</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
+
             </div>
         </section>
 
         <!-- BHAJAN SECTION -->
         <section id="bhajan" class="section">
-            <div class="section-header">
-                <h2>🎵 भजन संगम</h2>
-                <p>माँ सरस्वती के भक्ति गीत</p>
+            <div class="section-header" data-aos="fade-down">
+                <div class="section-icon">🎵</div>
+                <h2>भजन संगम</h2>
+                <p>माँ सरस्वती के मधुर भक्ति गीत</p>
+                <div class="header-divider"></div>
             </div>
 
-            <div class="bhajan-container">
-                <div class="video-player">
-                    <div id="youtubePlayer"></div>
+            <div class="bhajan-container" data-aos="fade-up">
+                
+                <div class="video-player-section glass-effect">
+                    <div class="player-header">
+                        <h3><i class="fas fa-play-circle"></i> अभी चल रहा है</h3>
+                        <div class="player-controls">
+                            <button class="control-btn" id="prevBtn">
+                                <i class="fas fa-step-backward"></i>
+                            </button>
+                            <button class="control-btn" id="nextBtn">
+                                <i class="fas fa-step-forward"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="video-player">
+                        <div id="youtubePlayer"></div>
+                    </div>
+                    <div class="now-playing">
+                        <span class="now-playing-icon">🎶</span>
+                        <span id="nowPlayingTitle">भजन चुनें...</span>
+                    </div>
                 </div>
 
-                <div class="playlist">
-                    <h3>📜 प्लेलिस्ट</h3>
+                <div class="playlist-section glass-effect">
+                    <div class="playlist-header">
+                        <h3><i class="fas fa-list"></i> प्लेलिस्ट</h3>
+                        <span class="playlist-count" id="playlistCount">6 गाने</span>
+                    </div>
                     <ul class="playlist-items" id="playlistItems">
-                        <!-- Will be populated by JavaScript -->
+                        <!-- Populated by JavaScript -->
                     </ul>
                 </div>
+
             </div>
         </section>
 
         <!-- SUPPORT SECTION -->
         <section id="support" class="section">
-            <div class="section-header">
-                <h2>📞 सहायता एवं संपर्क</h2>
+            <div class="section-header" data-aos="fade-down">
+                <div class="section-icon">📞</div>
+                <h2>सहायता एवं संपर्क</h2>
                 <p>किसी भी सहायता के लिए हमसे संपर्क करें</p>
+                <div class="header-divider"></div>
             </div>
 
             <div class="support-container">
-                <div class="contact-info">
-                    <div class="info-card">
-                        <h3>📍 पता</h3>
+                
+                <div class="contact-info" data-aos="fade-up">
+                    
+                    <div class="info-card glass-effect">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>पता</h3>
                         <p>सरस्वती पूजा आयोजन समिति<br>
                         सिंगेस्वरी हाई स्कूल<br>
                         बौंसी, बांका, बिहार - 813104</p>
                     </div>
 
-                    <div class="info-card">
-                        <h3>📱 संपर्क नंबर</h3>
-                        <p>
-                            <a href="tel:+917631680636">+91 76316 80636</a><br>
-                            <a href="tel:+916202182375">+91 62021 82375</a>
-                        </p>
+                    <div class="info-card glass-effect">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>संपर्क नंबर</h3>
+                        <div class="phone-numbers">
+                            <a href="tel:+917631680636" class="phone-link">
+                                <i class="fas fa-phone"></i> +91 76316 80636
+                            </a>
+                            <a href="tel:+916202182375" class="phone-link">
+                                <i class="fas fa-phone"></i> +91 62021 82375
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="info-card">
-                        <h3>👥 समिति सदस्य</h3>
+                    <div class="info-card glass-effect">
+                        <div class="info-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3>समिति सदस्य</h3>
                         <ul class="committee-list">
-                            <li>श्री अमरेश चौधरी</li>
-                            <li>श्री दिवाकर चौधरी</li>
-                            <li>श्री रवि साह</li>
+                            <li><i class="fas fa-user-tie"></i> श्री अमरेश चौधरी</li>
+                            <li><i class="fas fa-user-tie"></i> श्री दिवाकर चौधरी</li>
+                            <li><i class="fas fa-user-tie"></i> श्री रवि साह</li>
                         </ul>
                     </div>
+
                 </div>
 
-                <div class="map-container">
-                    <h3>🗺️ स्थान</h3>
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.9834842891447!2d86.9847!3d25.0123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAwJzQ0LjMiTiA4NsKwNTknMDQuOSJF!5e0!3m2!1sen!2sin!4v1234567890"
-                        width="100%" 
-                        height="350" 
-                        style="border:0; border-radius: 15px;" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                    </iframe>
+                <div class="map-section" data-aos="fade-up" data-aos-delay="200">
+                    <div class="map-container glass-effect">
+                        <div class="map-header">
+                            <h3><i class="fas fa-map"></i> हमारा स्थान</h3>
+                            <a href="https://maps.google.com/?q=Singeswari+High+School+Bounsi" 
+                               target="_blank" class="directions-btn">
+                                <i class="fas fa-directions"></i> दिशा-निर्देश पाएं
+                            </a>
+                        </div>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d215.18577330442736!2d87.06143377061605!3d24.788755167964887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f0f900344f4085%3A0xc1c2059908e6756f!2zMTArMiBIaWdoIFNjaG9vbCDgpLjgpL_gpILgpLngpYfgpLbgpY3gpLXgpLDgpYAg4KSs4KWM4KSC4KS44KWA!5e1!3m2!1sen!2sin!4v1768308886045!5m2!1sen!2sin"
+                            width="100%" 
+                            height="400" 
+                            style="border:0; border-radius: 15px;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
                 </div>
+
             </div>
         </section>
 
     </main>
 
-    <!-- Receipt Modal -->
+    <!-- RECEIPT MODAL (ENHANCED) -->
     <div id="receiptModal" class="modal">
-        <div class="modal-content receipt-content">
-            <span class="close-modal">&times;</span>
+        <div class="modal-overlay" onclick="closeReceipt()"></div>
+        <div class="modal-content receipt-modal-content">
+            <button class="close-modal" onclick="closeReceipt()">
+                <i class="fas fa-times"></i>
+            </button>
             
-            <div id="receiptContainer" class="receipt">
-                <div class="receipt-watermark">ER. AJIT</div>
-                
-                <div class="receipt-header">
-                    <div class="receipt-om">ॐ</div>
-                    <h2>सहयोग पावती</h2>
-                    <p class="receipt-subtitle">सरस्वती पूजा आयोजन समिति</p>
-                    <p class="receipt-address">सिंगेस्वरी, बौंसी, बांका, बिहार - 813104</p>
-                </div>
-
-                <div class="receipt-body">
-                    <div class="receipt-row">
-                        <span class="label">रसीद संख्या:</span>
-                        <span class="value" id="receiptNo">SP-1001</span>
-                    </div>
-                    <div class="receipt-row">
-                        <span class="label">दिनांक:</span>
-                        <span class="value" id="receiptDate">23/01/2026</span>
-                    </div>
-                    <div class="receipt-row">
-                        <span class="label">सहयोगी का नाम:</span>
-                        <span class="value" id="receiptName">---</span>
-                    </div>
-                    <div class="receipt-row highlight">
-                        <span class="label">सहयोग राशि:</span>
-                        <span class="value" id="receiptAmount">₹ 0</span>
-                    </div>
-                    <div class="receipt-row">
-                        <span class="label">मोबाइल:</span>
-                        <span class="value" id="receiptMobile">---</span>
-                    </div>
-                </div>
-
-                <div class="receipt-footer">
-                    <div class="committee-info">
-                        <h4>समिति सदस्य:</h4>
-                        <p>श्री अमरेश चौधरी, श्री दिवाकर चौधरी, श्री रवि साह</p>
-                        <p class="contact">📞 +91 76316 80636 | +91 62021 82375</p>
+            <div class="receipt-wrapper">
+                <div id="receiptContainer" class="receipt">
+                    
+                    <!-- Watermark -->
+                    <div class="receipt-watermark">ER. AJIT</div>
+                    
+                    <!-- Receipt Border Design -->
+                    <div class="receipt-border-design">
+                        <div class="corner-design top-left"></div>
+                        <div class="corner-design top-right"></div>
+                        <div class="corner-design bottom-left"></div>
+                        <div class="corner-design bottom-right"></div>
                     </div>
                     
-                    <div class="seal-signature">
-                        <div class="seal">
-                            <div class="seal-circle">
-                                <span>समिति<br>मुहर</span>
-                            </div>
+                    <!-- Header -->
+                    <div class="receipt-header">
+                        <div class="receipt-om-symbol">ॐ</div>
+                        <h2 class="receipt-title">सहयोग पावती</h2>
+                        <div class="receipt-subtitle-main">DONATION RECEIPT</div>
+                        <div class="receipt-org">
+                            <strong>सरस्वती पूजा आयोजन समिति</strong><br>
+                            <small>Saraswati Puja Organizing Committee</small>
                         </div>
-                        <div class="signature">
-                            <p>हस्ताक्षर</p>
-                            <div class="signature-line"></div>
+                        <div class="receipt-address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            सिंगेस्वरी, बौंसी, बांका, बिहार - 813104
+                        </div>
+                        <div class="receipt-contact">
+                            <i class="fas fa-phone"></i> +91 76316 80636 | +91 62021 82375
                         </div>
                     </div>
-                </div>
 
-                <div class="receipt-note">
-                    <p>🙏 आपके सहयोग के लिए धन्यवाद। माँ सरस्वती की कृपा सदा बनी रहे।</p>
+                    <!-- Divider -->
+                    <div class="receipt-divider"></div>
+
+                    <!-- Body -->
+                    <div class="receipt-body">
+                        <div class="receipt-row">
+                            <span class="label"><i class="fas fa-file-alt"></i> रसीद संख्या:</span>
+                            <span class="value receipt-no-value" id="receiptNo">SP-1001</span>
+                        </div>
+                        <div class="receipt-row">
+                            <span class="label"><i class="fas fa-calendar"></i> दिनांक:</span>
+                            <span class="value" id="receiptDate">23/01/2026</span>
+                        </div>
+                        <div class="receipt-row">
+                            <span class="label"><i class="fas fa-user"></i> सहयोगी का नाम:</span>
+                            <span class="value" id="receiptName">---</span>
+                        </div>
+                        <div class="receipt-row">
+                            <span class="label"><i class="fas fa-phone"></i> मोबाइल:</span>
+                            <span class="value" id="receiptMobile">---</span>
+                        </div>
+                        <div class="receipt-row highlight-row">
+                            <span class="label"><i class="fas fa-rupee-sign"></i> सहयोग राशि:</span>
+                            <span class="value amount-value" id="receiptAmount">₹ 0</span>
+                        </div>
+                        <div class="receipt-amount-words">
+                            <em id="amountInWords">राशि शब्दों में...</em>
+                        </div>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="receipt-divider"></div>
+
+                    <!-- Footer -->
+                    <div class="receipt-footer">
+                        <div class="committee-section">
+                            <h4><i class="fas fa-users"></i> समिति सदस्य:</h4>
+                            <p>श्री अमरेश चौधरी, श्री दिवाकर चौधरी, श्री रवि साह</p>
+                        </div>
+                        
+                        <div class="seal-signature-row">
+                            <div class="seal-container">
+                                <div class="seal-circle">
+                                    <div class="seal-inner">
+                                        <span class="seal-text">समिति<br>मुहर</span>
+                                    </div>
+                                </div>
+                                <p class="seal-label">Committee Seal</p>
+                            </div>
+                            
+                            <div class="qr-receipt">
+                                <canvas id="receiptQR"></canvas>
+                                <p>Verify Receipt</p>
+                            </div>
+                            
+                            <div class="signature-container">
+                                <div class="signature-line"></div>
+                                <p class="signature-label">अधिकृत हस्ताक्षर<br><small>Authorized Signature</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thank You Note -->
+                    <div class="receipt-thankyou">
+                        <div class="thankyou-icon">🙏</div>
+                        <p><strong>आपके सहयोग के लिए हार्दिक धन्यवाद!</strong></p>
+                        <p><em>माँ सरस्वती की कृपा सदा आप पर बनी रहे।</em></p>
+                    </div>
+
+                    <!-- Footer Note -->
+                    <div class="receipt-footer-note">
+                        <p>यह एक कंप्यूटर जनित रसीद है। This is a computer generated receipt.</p>
+                    </div>
+
                 </div>
             </div>
 
+            <!-- Action Buttons -->
             <div class="receipt-actions">
-                <button onclick="printReceipt()" class="btn-print">🖨️ प्रिंट / सेव करें</button>
-                <button onclick="closeReceipt()" class="btn-close">बंद करें</button>
+                <button onclick="printReceipt()" class="btn-action btn-print">
+                    <i class="fas fa-print"></i> प्रिंट करें
+                </button>
+                <button onclick="downloadReceipt()" class="btn-action btn-download">
+                    <i class="fas fa-download"></i> डाउनलोड करें
+                </button>
+                <button onclick="shareReceipt()" class="btn-action btn-share">
+                    <i class="fas fa-share-alt"></i> शेयर करें
+                </button>
             </div>
+
+            <!-- Social Share Options -->
+            <div class="social-share" id="socialShare" style="display: none;">
+                <h4>शेयर करें:</h4>
+                <div class="social-buttons">
+                    <button onclick="shareToWhatsApp()" class="social-btn whatsapp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </button>
+                    <button onclick="shareToFacebook()" class="social-btn facebook">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </button>
+                    <button onclick="shareToTelegram()" class="social-btn telegram">
+                        <i class="fab fa-telegram"></i> Telegram
+                    </button>
+                    <button onclick="shareToTwitter()" class="social-btn twitter">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </button>
+                    <button onclick="copyReceiptLink()" class="social-btn link">
+                        <i class="fas fa-link"></i> लिंक कॉपी करें
+                    </button>
+                </div>
+            </div>
+
         </div>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>© 2026 सरस्वती पूजा आयोजन समिति, सिंगेस्वरी</p>
+            <div class="footer-section">
+                <h3>सरस्वती पूजा आयोजन समिति</h3>
+                <p>सिंगेस्वरी, बौंसी, बांका, बिहार</p>
+            </div>
+            <div class="footer-section">
+                <h4>त्वरित लिंक</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">मुख्य पृष्ठ</a></li>
+                    <li><a href="#donate">सहयोग करें</a></li>
+                    <li><a href="#donors">सहयोगी सूची</a></li>
+                    <li><a href="#support">संपर्क करें</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>सोशल मीडिया</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 सरस्वती पूजा आयोजन समिति, सिंगेस्वरी | सर्वाधिकार सुरक्षित</p>
             <p class="disclaimer">⚠️ यह वेबसाइट केवल पूजा सहयोग हेतु है</p>
-            <p class="developer">Developed with 💛 by ER. AJIT</p>
+            <p class="developer">Developed with 💛 by <strong>ER. AJIT</strong></p>
         </div>
     </footer>
 
-    <!-- Disclaimer Banner (Fixed Bottom) -->
-    <div class="disclaimer-banner">
-        ⚠️ यह वेबसाइट केवल पूजा सहयोग हेतु है
-    </div>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-    <!-- JavaScript -->
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="script.js"></script>
 
 </body>
-
 </html>
-
