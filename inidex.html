@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>सरस्वती पूजा सहयोग पोर्टल | Saraswati Puja 2026</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ॐ</text></svg>">
+</head>
+<body>
+
+    <!-- Header (Sticky Navigation) -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo">
+                <span class="om-symbol">ॐ</span>
+                <span class="site-title">सरस्वती पूजा</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">मुख्य पृष्ठ</a></li>
+                <li><a href="#donate" class="nav-link">सहयोग करें</a></li>
+                <li><a href="#donors" class="nav-link">सहयोगी सूची</a></li>
+                <li><a href="#bhajan" class="nav-link">भजन संगम</a></li>
+                <li><a href="#support" class="nav-link">सहायता</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- HOME SECTION -->
+        <section id="home" class="section active">
+            <div class="hero-container">
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1583266360058-05a3d4c3313b?w=800" alt="Maa Saraswati" id="saraswatiImage">
+                    <div class="vandana-overlay">
+                        <p class="vandana-text">
+                            "या कुन्देन्दुतुषारहारधवला<br>
+                            या शुभ्रवस्त्रावृता<br>
+                            या वीणावरदण्डमण्डितकरा<br>
+                            या श्वेतपद्मासना।<br>
+                            या ब्रह्माच्युत शंकरप्रभृतिभिर्देवैः सदा वन्दिता<br>
+                            सा मां पातु सरस्वती भगवती<br>
+                            निःशेषजाड्यापहा॥"
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="puja-info-card">
+                    <h1>🌼 सरस्वती पूजा 2026 🌼</h1>
+                    <div class="puja-date">
+                        <span class="date-icon">📅</span>
+                        <span class="date-text">23 जनवरी 2026 (बसंत पंचमी)</span>
+                    </div>
+                    <p class="puja-location">📍 सिंगेस्वरी, बौंसी, बांका, बिहार - 813104</p>
+                </div>
+
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-value" id="totalDonation">₹ 0</div>
+                        <div class="stat-label">कुल सहयोग राशि</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-value" id="totalDonors">0</div>
+                        <div class="stat-label">कुल सहयोगी</div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <a href="#donate" class="btn-primary">🙏 अभी सहयोग करें</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- DONATE SECTION -->
+        <section id="donate" class="section">
+            <div class="section-header">
+                <h2>💛 सहयोग करें</h2>
+                <p>आपका छोटा सा योगदान भी माँ सरस्वती की कृपा का माध्यम बनेगा</p>
+            </div>
+
+            <div class="donate-container">
+                <!-- Left: Payment Details -->
+                <div class="payment-details">
+                    <div class="payment-card">
+                        <h3>💳 भुगतान विवरण</h3>
+                        
+                        <div class="qr-code-container">
+                            <img id="qrCode" src="" alt="UPI QR Code">
+                            <p class="qr-label">स्कैन करें और भुगतान करें</p>
+                        </div>
+
+                        <div class="upi-details">
+                            <div class="detail-row">
+                                <span class="label">UPI ID:</span>
+                                <span class="value" id="upiId">rkrupeshchoudhary@oksbi</span>
+                                <button class="copy-btn" onclick="copyUPI()">📋</button>
+                            </div>
+                        </div>
+
+                        <div class="bank-details">
+                            <h4>🏦 बैंक विवरण</h4>
+                            <p><strong>बैंक:</strong> State Bank of India</p>
+                            <p><strong>खाता:</strong> कृपया UPI का उपयोग करें</p>
+                        </div>
+
+                        <div class="payment-steps">
+                            <h4>📱 भुगतान कैसे करें?</h4>
+                            <ol>
+                                <li>QR कोड स्कैन करें या UPI ID कॉपी करें</li>
+                                <li>राशि दर्ज करें और भुगतान करें</li>
+                                <li>स्क्रीनशॉट लें</li>
+                                <li>दाईं ओर फॉर्म भरें</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Donation Form -->
+                <div class="donation-form-container">
+                    <form id="donationForm" class="donation-form">
+                        <h3>✍️ सहयोग विवरण भरें</h3>
+
+                        <div class="form-group">
+                            <label for="donorName">नाम *</label>
+                            <input type="text" id="donorName" name="donorName" required placeholder="अपना पूरा नाम दर्ज करें">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="donorMobile">मोबाइल नंबर *</label>
+                            <input type="tel" id="donorMobile" name="donorMobile" required 
+                                   pattern="[6-9][0-9]{9}" 
+                                   placeholder="10 अंकों का मोबाइल नंबर">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="donationAmount">राशि (₹) *</label>
+                            <input type="number" id="donationAmount" name="donationAmount" required 
+                                   min="1" placeholder="सहयोग राशि दर्ज करें">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paymentScreenshot">भुगतान स्क्रीनशॉट *</label>
+                            <input type="file" id="paymentScreenshot" name="paymentScreenshot" 
+                                   accept="image/png, image/jpeg, image/jpg" required>
+                            <small>PNG या JPG (अधिकतम 5MB)</small>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-submit" id="submitBtn">
+                                <span class="btn-text">सबमिट करें</span>
+                                <span class="loader" style="display: none;"></span>
+                            </button>
+                        </div>
+
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- DONOR LIST SECTION -->
+        <section id="donors" class="section">
+            <div class="section-header">
+                <h2>🙏 सहयोगी सूची</h2>
+                <p>सभी स्वीकृत सहयोगियों की सूची</p>
+            </div>
+
+            <div class="donors-container">
+                <div class="search-box">
+                    <input type="text" id="donorSearch" placeholder="🔍 नाम से खोजें...">
+                </div>
+
+                <div class="donors-table-container">
+                    <table class="donors-table">
+                        <thead>
+                            <tr>
+                                <th>क्र.सं.</th>
+                                <th>नाम</th>
+                                <th>राशि (₹)</th>
+                                <th>तिथि</th>
+                                <th>रसीद नं.</th>
+                            </tr>
+                        </thead>
+                        <tbody id="donorsTableBody">
+                            <tr>
+                                <td colspan="5" class="loading-row">
+                                    <div class="spinner"></div>
+                                    <p>डेटा लोड हो रहा है...</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- BHAJAN SECTION -->
+        <section id="bhajan" class="section">
+            <div class="section-header">
+                <h2>🎵 भजन संगम</h2>
+                <p>माँ सरस्वती के भक्ति गीत</p>
+            </div>
+
+            <div class="bhajan-container">
+                <div class="video-player">
+                    <div id="youtubePlayer"></div>
+                </div>
+
+                <div class="playlist">
+                    <h3>📜 प्लेलिस्ट</h3>
+                    <ul class="playlist-items" id="playlistItems">
+                        <!-- Will be populated by JavaScript -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUPPORT SECTION -->
+        <section id="support" class="section">
+            <div class="section-header">
+                <h2>📞 सहायता एवं संपर्क</h2>
+                <p>किसी भी सहायता के लिए हमसे संपर्क करें</p>
+            </div>
+
+            <div class="support-container">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3>📍 पता</h3>
+                        <p>सरस्वती पूजा आयोजन समिति<br>
+                        सिंगेस्वरी हाई स्कूल<br>
+                        बौंसी, बांका, बिहार - 813104</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>📱 संपर्क नंबर</h3>
+                        <p>
+                            <a href="tel:+917631680636">+91 76316 80636</a><br>
+                            <a href="tel:+916202182375">+91 62021 82375</a>
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>👥 समिति सदस्य</h3>
+                        <ul class="committee-list">
+                            <li>श्री अमरेश चौधरी</li>
+                            <li>श्री दिवाकर चौधरी</li>
+                            <li>श्री रवि साह</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <h3>🗺️ स्थान</h3>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.9834842891447!2d86.9847!3d25.0123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAwJzQ0LjMiTiA4NsKwNTknMDQuOSJF!5e0!3m2!1sen!2sin!4v1234567890"
+                        width="100%" 
+                        height="350" 
+                        style="border:0; border-radius: 15px;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Receipt Modal -->
+    <div id="receiptModal" class="modal">
+        <div class="modal-content receipt-content">
+            <span class="close-modal">&times;</span>
+            
+            <div id="receiptContainer" class="receipt">
+                <div class="receipt-watermark">ER. AJIT</div>
+                
+                <div class="receipt-header">
+                    <div class="receipt-om">ॐ</div>
+                    <h2>सहयोग पावती</h2>
+                    <p class="receipt-subtitle">सरस्वती पूजा आयोजन समिति</p>
+                    <p class="receipt-address">सिंगेस्वरी, बौंसी, बांका, बिहार - 813104</p>
+                </div>
+
+                <div class="receipt-body">
+                    <div class="receipt-row">
+                        <span class="label">रसीद संख्या:</span>
+                        <span class="value" id="receiptNo">SP-1001</span>
+                    </div>
+                    <div class="receipt-row">
+                        <span class="label">दिनांक:</span>
+                        <span class="value" id="receiptDate">23/01/2026</span>
+                    </div>
+                    <div class="receipt-row">
+                        <span class="label">सहयोगी का नाम:</span>
+                        <span class="value" id="receiptName">---</span>
+                    </div>
+                    <div class="receipt-row highlight">
+                        <span class="label">सहयोग राशि:</span>
+                        <span class="value" id="receiptAmount">₹ 0</span>
+                    </div>
+                    <div class="receipt-row">
+                        <span class="label">मोबाइल:</span>
+                        <span class="value" id="receiptMobile">---</span>
+                    </div>
+                </div>
+
+                <div class="receipt-footer">
+                    <div class="committee-info">
+                        <h4>समिति सदस्य:</h4>
+                        <p>श्री अमरेश चौधरी, श्री दिवाकर चौधरी, श्री रवि साह</p>
+                        <p class="contact">📞 +91 76316 80636 | +91 62021 82375</p>
+                    </div>
+                    
+                    <div class="seal-signature">
+                        <div class="seal">
+                            <div class="seal-circle">
+                                <span>समिति<br>मुहर</span>
+                            </div>
+                        </div>
+                        <div class="signature">
+                            <p>हस्ताक्षर</p>
+                            <div class="signature-line"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="receipt-note">
+                    <p>🙏 आपके सहयोग के लिए धन्यवाद। माँ सरस्वती की कृपा सदा बनी रहे।</p>
+                </div>
+            </div>
+
+            <div class="receipt-actions">
+                <button onclick="printReceipt()" class="btn-print">🖨️ प्रिंट / सेव करें</button>
+                <button onclick="closeReceipt()" class="btn-close">बंद करें</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 सरस्वती पूजा आयोजन समिति, सिंगेस्वरी</p>
+            <p class="disclaimer">⚠️ यह वेबसाइट केवल पूजा सहयोग हेतु है</p>
+            <p class="developer">Developed with 💛 by ER. AJIT</p>
+        </div>
+    </footer>
+
+    <!-- Disclaimer Banner (Fixed Bottom) -->
+    <div class="disclaimer-banner">
+        ⚠️ यह वेबसाइट केवल पूजा सहयोग हेतु है
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
